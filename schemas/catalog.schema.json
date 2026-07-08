@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "banks"],
+  "properties": {
+    "version": {"type": "integer"},
+    "updated_at": {"type": "string"},
+    "banks": {
+      "type": "array",
+      "items": {"$ref": "./bank.schema.json"}
+    }
+  }
+}
