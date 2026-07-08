@@ -1,8 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["id", "title", "question_count", "questions_url", "scope"],
+  "required": ["id", "title", "question_count", "scope"],
   "properties": {
+    "schema_version": {"type": "integer"},
     "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
     "title": {"type": "string"},
     "description": {"type": "string"},
@@ -29,9 +30,14 @@
       "type": "array",
       "items": {"type": "string"}
     },
+    "questions_file": {"type": "string"},
     "questions_url": {"type": "string", "format": "uri"},
     "github_url": {"type": "string", "format": "uri"},
     "issues_url": {"type": "string", "format": "uri"},
     "status": {"enum": ["available", "draft", "archived"]}
-  }
+  },
+  "anyOf": [
+    {"required": ["questions_file"]},
+    {"required": ["questions_url"]}
+  ]
 }
