@@ -13,68 +13,14 @@
   ],
   "banks": [
     {
-      "id": "demo-gva-c1-administrativo",
-      "title": "Demo GVA C1 Administrativo",
-      "description": "Banco de ejemplo para probar la estructura pública de Agora con refs compatibles con el modelo actual.",
-      "opposition": "Generalitat Valenciana",
-      "level": "C1",
-      "question_count": 3,
-      "scope": {
-        "type": "mixed",
-        "refs": [
-          "es-ce-1978::titulo-i",
-          "es-ley-39-2015::titulo-i",
-          "es-ley-39-2015::titulo-iv"
-        ]
-      },
-      "compatible_syllabi": [
-        "c1-04-03::64-26"
-      ],
-      "tags": [
-        "Ley 39/2015",
-        "Constitución",
-        "Procedimiento",
-        "demo"
-      ],
-      "github_url": "https://github.com/OpenOpo/agora/tree/main/banks/demo-gva-c1-administrativo",
-      "issues_url": "https://github.com/OpenOpo/agora/issues",
-      "questions_url": "https://raw.githubusercontent.com/OpenOpo/agora/main/banks/demo-gva-c1-administrativo/questions.jsonl",
-      "status": "available"
-    },
-    {
       "id": "migrated-c1-04-03-draft",
       "title": "Banco migrado C1-04-03 - Draft",
-      "description": "Banco migrado desde WordPress. Las preguntas apuntan a refs normativas; la convocatoria C1-04-03::64-26 se representa aparte en syllabi/.",
+      "description": "Banco migrado desde WordPress.",
       "question_count": 2839,
       "scope": {
         "type": "mixed",
         "refs": [
-          "es-ce-1978::titulo-i",
-          "es-ce-1978::titulo-iv",
-          "es-ce-1978::titulo-preliminar",
-          "es-ce-1978::titulo-v",
-          "es-decreto-cv-42-2019",
-          "es-ley-39-2015::titulo-i",
-          "es-ley-39-2015::titulo-ii",
-          "es-ley-39-2015::titulo-iii",
-          "es-ley-39-2015::titulo-iv",
-          "es-ley-39-2015::titulo-preliminar",
-          "es-ley-40-2015::titulo-preliminar::capitulo-ii",
-          "es-ley-5-1983",
-          "es-ley-5-1983::titulo-i",
-          "es-ley-5-1983::titulo-ii::capitulo-vi",
-          "es-ley-5-1983::titulo-iii",
-          "es-ley-5-1983::titulo-iv",
-          "es-ley-cv-4-2021::titulo-i",
-          "es-ley-cv-4-2021::titulo-iii",
-          "es-ley-cv-4-2021::titulo-v",
-          "es-ley-cv-4-2021::titulo-vi",
-          "es-ley-cv-9-2003",
-          "es-lo-5-1982",
-          "es-lo-5-1982::titulo-i",
-          "es-lo-5-1982::titulo-ii",
-          "es-lo-5-1982::titulo-iii",
-          "es-lo-5-1982::titulo-iv"
+          "es-ley-39-2015::titulo-iv"
         ]
       },
       "compatible_syllabi": [
