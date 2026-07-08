@@ -5,6 +5,21 @@
   "properties": {
     "version": {"type": "integer"},
     "updated_at": {"type": "string"},
+    "syllabi": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "path", "status"],
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "path": {"type": "string"},
+          "source_url": {"type": "string", "format": "uri"},
+          "refs_count": {"type": "integer", "minimum": 0},
+          "status": {"enum": ["available", "draft", "archived"]}
+        }
+      }
+    },
     "banks": {
       "type": "array",
       "items": {"$ref": "./bank.schema.json"}
