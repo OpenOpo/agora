@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-08",
+  "updated_at": "2026-07-09",
   "syllabi": [
     {
       "id": "c1-04-03::64-26",
@@ -12,6 +12,32 @@
     }
   ],
   "banks": [
+    {
+      "id": "demo-gva-c1-administrativo",
+      "title": "Demo GVA C1 Administrativo",
+      "description": "Banco de ejemplo para probar la estructura pública de Agora.",
+      "opposition": "Generalitat Valenciana",
+      "level": "C1",
+      "question_count": 3,
+      "scope": {
+        "type": "syllabus_node",
+        "refs": [
+          "gva-c1-04-03-64-26:tema-01"
+        ]
+      },
+      "compatible_syllabi": [
+        "gva-c1-04-03-64-26"
+      ],
+      "tags": [
+        "Ley 39/2015",
+        "Constitución",
+        "Procedimiento"
+      ],
+      "github_url": "https://github.com/OpenOpo/agora/tree/main/banks/demo-gva-c1-administrativo",
+      "issues_url": "https://github.com/OpenOpo/agora/issues",
+      "questions_url": "https://raw.githubusercontent.com/OpenOpo/agora/main/banks/demo-gva-c1-administrativo/questions.jsonl",
+      "status": "available"
+    },
     {
       "id": "migrated-c1-04-03-draft",
       "title": "Banco migrado C1-04-03 - Draft",
@@ -50,6 +76,11 @@
       },
       "compatible_syllabi": [
         "c1-04-03::64-26"
+      ],
+      "tags": [
+        "migracion-wordpress",
+        "c1-04-03",
+        "draft"
       ],
       "github_url": "https://github.com/OpenOpo/agora/tree/main/banks/migrated-c1-04-03-draft",
       "questions_url": "https://raw.githubusercontent.com/OpenOpo/agora/main/banks/migrated-c1-04-03-draft/questions.jsonl",
