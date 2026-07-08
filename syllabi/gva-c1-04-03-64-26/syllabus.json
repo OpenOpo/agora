@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "gva-c1-04-03-64-26",
+  "title": "GVA C1-04-03 convocatoria 64/26",
+  "opposition": "Generalitat Valenciana",
+  "level": "C1",
+  "call": "64/26",
+  "blocks": [
+    {
+      "id": "gva-c1-04-03-64-26:parte-general",
+      "title": "Parte general",
+      "items": [
+        {
+          "id": "gva-c1-04-03-64-26:tema-01",
+          "title": "Tema 1",
+          "refs": ["es-ley-39-2015-art-14", "es-ce-1978-art-103"]
+        }
+      ]
+    }
+  ]
+}
