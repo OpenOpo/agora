@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "demo-gva-c1-administrativo",
+  "title": "Demo GVA C1 Administrativo",
+  "description": "Banco de ejemplo para probar la estructura pública de Agora.",
+  "opposition": "Generalitat Valenciana",
+  "level": "C1",
+  "question_count": 3,
+  "scope": {
+    "type": "syllabus_node",
+    "refs": ["gva-c1-04-03-64-26:tema-01"]
+  },
+  "compatible_syllabi": ["gva-c1-04-03-64-26"],
+  "questions_file": "questions.jsonl",
+  "status": "draft"
+}
