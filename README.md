@@ -49,10 +49,6 @@ syllabi/
     syllabus.json
     README.md
 banks/
-  demo-gva-c1-administrativo/
-    bank.json
-    questions.jsonl
-    README.md
   migrated-c1-04-03-draft/
     bank.json
     questions.jsonl
@@ -67,6 +63,7 @@ scripts/
   validate_agora.py
 docs/
   import-contract.md
+  migration-exclusions-backlog.md
 CONTRIBUTING.md
 LICENSE
 ```
@@ -82,12 +79,6 @@ Los elementos públicos pueden usar estos estados:
 ## Formato de preguntas
 
 Cada línea de `questions.jsonl` es una pregunta JSON independiente.
-
-Ejemplo:
-
-```json
-{"statement":"¿Qué reconoce el Título I de la Constitución Española?","correct_answer":"Los derechos y deberes fundamentales.","distractors":["La organización territorial completa del Estado.","El régimen electoral de las entidades locales.","La estructura interna de cada conselleria."],"explanation":"Pregunta demostrativa alineada con una referencia normativa definida en refs/nodes.jsonl.","difficulty":"easy","refs":[{"type":"reference","id":"es-ce-1978::titulo-i"}],"tags":["Constitución","Derechos fundamentales"]}
-```
 
 Los `tags` son solo una ayuda de búsqueda y lectura; no sustituyen a `refs`.
 
