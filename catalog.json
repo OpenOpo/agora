@@ -1,24 +1,59 @@
 {
   "version": 1,
   "updated_at": "2026-07-08",
+  "syllabi": [
+    {
+      "id": "c1-04-03::64-26",
+      "title": "C1-04-03 - Convocatoria 64/26",
+      "path": "syllabi/c1-04-03-64-26/syllabus.json",
+      "status": "draft",
+      "source_url": "https://dogv.gva.es/datos/2026/03/03/pdf/2026_6708_es.pdf",
+      "refs_count": 38
+    }
+  ],
   "banks": [
     {
-      "id": "demo-gva-c1-administrativo",
-      "title": "Demo GVA C1 Administrativo",
-      "description": "Banco de ejemplo para probar la estructura pública de Agora.",
-      "opposition": "Generalitat Valenciana",
-      "level": "C1",
-      "question_count": 3,
+      "id": "migrated-c1-04-03-draft",
+      "title": "Banco migrado C1-04-03 - Draft",
+      "description": "Banco migrado desde WordPress. Las preguntas apuntan a refs normativas; la convocatoria C1-04-03::64-26 se representa aparte en syllabi/.",
+      "question_count": 2839,
       "scope": {
-        "type": "syllabus_node",
-        "refs": ["gva-c1-04-03-64-26:tema-01"]
+        "type": "mixed",
+        "refs": [
+          "es-ce-1978::titulo-i",
+          "es-ce-1978::titulo-iv",
+          "es-ce-1978::titulo-preliminar",
+          "es-ce-1978::titulo-v",
+          "es-decreto-cv-42-2019",
+          "es-ley-39-2015::titulo-i",
+          "es-ley-39-2015::titulo-ii",
+          "es-ley-39-2015::titulo-iii",
+          "es-ley-39-2015::titulo-iv",
+          "es-ley-39-2015::titulo-preliminar",
+          "es-ley-40-2015::titulo-preliminar::capitulo-ii",
+          "es-ley-5-1983",
+          "es-ley-5-1983::titulo-i",
+          "es-ley-5-1983::titulo-ii::capitulo-vi",
+          "es-ley-5-1983::titulo-iii",
+          "es-ley-5-1983::titulo-iv",
+          "es-ley-cv-4-2021::titulo-i",
+          "es-ley-cv-4-2021::titulo-iii",
+          "es-ley-cv-4-2021::titulo-v",
+          "es-ley-cv-4-2021::titulo-vi",
+          "es-ley-cv-9-2003",
+          "es-lo-5-1982",
+          "es-lo-5-1982::titulo-i",
+          "es-lo-5-1982::titulo-ii",
+          "es-lo-5-1982::titulo-iii",
+          "es-lo-5-1982::titulo-iv"
+        ]
       },
-      "compatible_syllabi": ["gva-c1-04-03-64-26"],
-      "tags": ["Ley 39/2015", "Constitución", "Procedimiento"],
-      "github_url": "https://github.com/OpenOpo/agora/tree/main/banks/demo-gva-c1-administrativo",
-      "issues_url": "https://github.com/OpenOpo/agora/issues",
-      "questions_url": "https://raw.githubusercontent.com/OpenOpo/agora/main/banks/demo-gva-c1-administrativo/questions.jsonl",
-      "status": "available"
+      "compatible_syllabi": [
+        "c1-04-03::64-26"
+      ],
+      "github_url": "https://github.com/OpenOpo/agora/tree/main/banks/migrated-c1-04-03-draft",
+      "questions_url": "https://raw.githubusercontent.com/OpenOpo/agora/main/banks/migrated-c1-04-03-draft/questions.jsonl",
+      "status": "draft"
     }
   ]
 }

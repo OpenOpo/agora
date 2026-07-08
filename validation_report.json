@@ -1,0 +1,136 @@
+{
+  "schema_version": "agora-model-v2-validation-v1",
+  "package_dir": "/mnt/data/agora_c1_04_03_model_v2",
+  "status": "valid_draft",
+  "counts": {
+    "sources": 12,
+    "nodes": 38,
+    "syllabus_refs": 38,
+    "questions_in_bank": 2839,
+    "excluded_invalid_refs": 193,
+    "excluded_outside_syllabus": 95,
+    "pending_without_refs": 689,
+    "duplicate_questions_discarded": 1
+  },
+  "checks": {
+    "undefined_syllabus_refs": [],
+    "all_question_refs_defined": true,
+    "all_question_refs_intersect_syllabus": true,
+    "duplicate_ids": []
+  },
+  "top_question_refs": [
+    [
+      "es-ley-39-2015::titulo-iv",
+      594
+    ],
+    [
+      "es-ley-39-2015::titulo-ii",
+      521
+    ],
+    [
+      "es-ley-39-2015::titulo-i",
+      286
+    ],
+    [
+      "es-lo-5-1982::titulo-iii",
+      251
+    ],
+    [
+      "es-ley-39-2015::titulo-iii",
+      193
+    ],
+    [
+      "es-lo-5-1982",
+      104
+    ],
+    [
+      "es-ce-1978::titulo-i",
+      100
+    ],
+    [
+      "es-ley-5-1983",
+      96
+    ],
+    [
+      "es-lo-5-1982::titulo-ii",
+      95
+    ],
+    [
+      "es-lo-5-1982::titulo-i",
+      93
+    ],
+    [
+      "es-lo-5-1982::titulo-iv",
+      86
+    ],
+    [
+      "es-ley-39-2015::titulo-preliminar",
+      63
+    ],
+    [
+      "es-ley-5-1983::titulo-i",
+      58
+    ],
+    [
+      "es-ley-40-2015::titulo-preliminar::capitulo-ii",
+      57
+    ],
+    [
+      "es-ce-1978::titulo-preliminar",
+      54
+    ],
+    [
+      "es-ce-1978::titulo-iv",
+      54
+    ],
+    [
+      "es-ce-1978::titulo-v",
+      54
+    ],
+    [
+      "es-ley-5-1983::titulo-iii",
+      52
+    ],
+    [
+      "es-ley-cv-4-2021::titulo-v",
+      42
+    ],
+    [
+      "es-ley-5-1983::titulo-iv",
+      40
+    ],
+    [
+      "es-ley-5-1983::titulo-ii::capitulo-vi",
+      38
+    ],
+    [
+      "es-ley-cv-4-2021::titulo-i",
+      36
+    ],
+    [
+      "es-ley-cv-4-2021::titulo-iii",
+      35
+    ],
+    [
+      "es-ley-cv-4-2021::titulo-vi",
+      31
+    ],
+    [
+      "es-decreto-cv-42-2019",
+      30
+    ],
+    [
+      "es-ley-cv-9-2003",
+      30
+    ]
+  ],
+  "files": {
+    "catalog": "/mnt/data/agora_c1_04_03_model_v2/catalog.json",
+    "sources": "/mnt/data/agora_c1_04_03_model_v2/refs/sources.jsonl",
+    "nodes": "/mnt/data/agora_c1_04_03_model_v2/refs/nodes.jsonl",
+    "syllabus": "/mnt/data/agora_c1_04_03_model_v2/syllabi/c1-04-03-64-26/syllabus.json",
+    "bank": "/mnt/data/agora_c1_04_03_model_v2/banks/migrated-c1-04-03-draft/bank.json",
+    "questions": "/mnt/data/agora_c1_04_03_model_v2/banks/migrated-c1-04-03-draft/questions.jsonl",
+    "migration_notes": "/mnt/data/agora_c1_04_03_model_v2/MIGRATION_NOTES.md"
+  }
+}
