@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "gva-c1-04-03-64-26",
+      "title": "GVA C1-04-03 convocatoria 64/26",
+      "administration": "Generalitat Valenciana",
+      "level": "C1",
+      "call": "64/26"
+    },
+    {
+      "id": "gva-c2-03-03",
+      "title": "GVA C2-03-03",
+      "administration": "Generalitat Valenciana",
+      "level": "C2",
+      "call": ""
+    }
+  ]
+}
