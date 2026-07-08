@@ -1,27 +1,61 @@
 # Agora OpenOpo
 
-Repositorio público de bancos de preguntas para OpenOpo.
+Repositorio público de temarios, referencias normativas y bancos de preguntas para OpenOpo.
 
 La idea es que cualquier persona pueda revisar el contenido, abrir issues, hacer forks y proponer cambios mediante pull requests.
 
-La especificación completa de referencias canónicas está en `docs/AGORA_REFERENCIAS_CANONICAS.md` dentro del proyecto OpenOpo.
+## Entrada pública
 
-## Estructura
+El punto de entrada estable para clientes e importadores es:
+
+```text
+https://raw.githubusercontent.com/OpenOpo/agora/main/catalog.json
+```
+
+El contrato público de importación está documentado en:
+
+```text
+docs/import-contract.md
+```
+
+## Modelo
+
+Agora separa el contenido en tres capas:
+
+```text
+refs/     -> referencias normativas canónicas
+syllabi/  -> convocatorias y temarios oficiales
+banks/    -> bancos reutilizables de preguntas
+```
+
+Regla principal:
+
+```text
+La convocatoria no contiene preguntas.
+La convocatoria contiene refs normativas exigidas.
+La pregunta evalúa refs normativas.
+Una pregunta es compatible con un temario si question.refs ∩ syllabus.refs != vacío.
+```
+
+## Estructura actual
 
 ```text
 catalog.json
 refs/
-  oppositions.json
-  legal-sources.json
-  legal-articles.jsonl
+  sources.jsonl
+  nodes.jsonl
+syllabi/
+  c1-04-03-64-26/
+    syllabus.json
+    README.md
 banks/
   demo-gva-c1-administrativo/
     bank.json
     questions.jsonl
     README.md
-syllabi/
-  gva-c1-04-03-64-26/
-    syllabus.json
+  migrated-c1-04-03-draft/
+    bank.json
+    questions.jsonl
     README.md
 schemas/
   catalog.schema.json
@@ -29,73 +63,63 @@ schemas/
   question.schema.json
   refs.schema.json
   syllabus.schema.json
+scripts/
+  validate_agora.py
+docs/
+  import-contract.md
 CONTRIBUTING.md
 LICENSE
 ```
 
+## Estados
+
+Los elementos públicos pueden usar estos estados:
+
+- `available`: contenido público e importable.
+- `draft`: contenido público para revisión, pero todavía no final.
+- `archived`: contenido histórico, no recomendado para importar por defecto.
+
 ## Formato de preguntas
 
-Cada línea de `questions.jsonl` es una pregunta:
+Cada línea de `questions.jsonl` es una pregunta JSON independiente.
+
+Ejemplo:
 
 ```json
-{"statement":"Pregunta...","correct_answer":"Respuesta correcta","distractors":["Opción 1","Opción 2","Opción 3"],"explanation":"Explicación opcional","difficulty":"medium","refs":[{"type":"legal_article","id":"es-ley-39-2015-art-14"},{"type":"syllabus_node","id":"gva-c1-04-03-64-26:tema-01"}],"tags":["Ley 39/2015","Artículo 14"]}
+{"statement":"¿Qué reconoce el Título I de la Constitución Española?","correct_answer":"Los derechos y deberes fundamentales.","distractors":["La organización territorial completa del Estado.","El régimen electoral de las entidades locales.","La estructura interna de cada conselleria."],"explanation":"Pregunta demostrativa alineada con una referencia normativa definida en refs/nodes.jsonl.","difficulty":"easy","refs":[{"type":"reference","id":"es-ce-1978::titulo-i"}],"tags":["Constitución","Derechos fundamentales"]}
 ```
-
-## Referencias canónicas
-
-Agora no usa etiquetas libres para enlazar contenido. Cada banco y cada pregunta deben apuntar a referencias canónicas de OpenOpo.
-
-Ejemplos de IDs:
-
-- Convocatoria: `gva-c1-04-03-64-26`.
-- Parte o bloque: `gva-c1-04-03-64-26:parte-general`.
-- Tema: `gva-c1-04-03-64-26:tema-01`.
-- Ley: `es-ley-39-2015`.
-- Artículo: `es-ley-39-2015-art-14`.
 
 Los `tags` son solo una ayuda de búsqueda y lectura; no sustituyen a `refs`.
 
-## Temarios públicos
+## Referencias canónicas
 
-Los temarios también pueden vivir en este repositorio para que la comunidad proponga cambios mediante pull requests.
-
-Cada convocatoria debería tener su propia carpeta estable:
+Agora no usa etiquetas libres para enlazar contenido. Cada banco y cada pregunta deben apuntar a referencias canónicas declaradas en:
 
 ```text
-syllabi/
-  gva-c1-04-03-64-26/
-    syllabus.json
-    README.md
-  gva-c1-04-03-70-25/
-    syllabus.json
-    README.md
-  gva-c2-03-03/
-    syllabus.json
-    README.md
+refs/sources.jsonl
+refs/nodes.jsonl
 ```
 
-Ejemplo mínimo de `syllabus.json`:
+Ejemplos de IDs actuales:
 
-```json
-{
-  "schema_version": 1,
-  "id": "gva-c1-04-03-64-26",
-  "title": "GVA C1-04-03 convocatoria 64/26",
-  "opposition": "Generalitat Valenciana",
-  "level": "C1",
-  "call": "64/26",
-  "blocks": [
-    {
-      "id": "gva-c1-04-03-64-26:parte-general",
-      "title": "Parte general",
-      "items": [
-        {
-          "id": "gva-c1-04-03-64-26:tema-01",
-          "title": "Tema 1",
-          "refs": ["es-ley-39-2015-art-14"]
-        }
-      ]
-    }
-  ]
-}
+- Constitución: `es-ce-1978`.
+- Título I de la Constitución: `es-ce-1978::titulo-i`.
+- Ley 39/2015: `es-ley-39-2015`.
+- Título IV de la Ley 39/2015: `es-ley-39-2015::titulo-iv`.
+- Convocatoria C1-04-03 64/26: `c1-04-03::64-26`.
+
+## Validación
+
+Antes de abrir un pull request, ejecuta:
+
+```bash
+python scripts/validate_agora.py
 ```
+
+El validador comprueba JSON/JSONL, refs, compatibilidad básica entre bancos y temarios, y recuentos declarados.
+
+## Contribuir
+
+Consulta `CONTRIBUTING.md` para las reglas básicas de contribución.
+
+No subas contenido si no tienes derecho a usarlo.
