@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["statement", "correct_answer", "refs"],
+  "properties": {
+    "statement": {"type": "string"},
+    "correct_answer": {"type": "string"},
+    "distractors": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "explanation": {"type": "string"},
+    "difficulty": {"enum": ["easy", "medium", "hard"]},
+    "refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type", "id"],
+        "properties": {
+          "type": {"enum": ["opposition", "syllabus_node", "legal_source", "legal_article", "reference"]},
+          "id": {"type": "string"}
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}
