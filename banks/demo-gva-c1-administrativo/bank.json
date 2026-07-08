@@ -12,5 +12,5 @@
   },
   "compatible_syllabi": ["gva-c1-04-03-64-26"],
   "questions_file": "questions.jsonl",
-  "status": "draft"
+  "status": "available"
 }
