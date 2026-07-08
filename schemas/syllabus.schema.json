@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "id", "title", "blocks"],
+  "properties": {
+    "schema_version": {"type": "integer"},
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "opposition": {"type": "string"},
+    "level": {"type": "string"},
+    "call": {"type": "string"},
+    "blocks": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/node"}
+    }
+  },
+  "$defs": {
+    "node": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": {"type": "string"},
+        "title": {"type": "string"},
+        "refs": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "items": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/node"}
+        }
+      }
+    }
+  }
+}
