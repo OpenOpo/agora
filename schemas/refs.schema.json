@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "items"],
+  "properties": {
+    "schema_version": {"type": "integer"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title"],
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "short_title": {"type": "string"},
+          "administration": {"type": "string"},
+          "level": {"type": "string"},
+          "call": {"type": "string"},
+          "jurisdiction": {"type": "string"}
+        }
+      }
+    }
+  }
+}
