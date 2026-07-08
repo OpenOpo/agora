@@ -15,23 +15,26 @@
     {
       "id": "demo-gva-c1-administrativo",
       "title": "Demo GVA C1 Administrativo",
-      "description": "Banco de ejemplo para probar la estructura pública de Agora.",
+      "description": "Banco de ejemplo para probar la estructura pública de Agora con refs compatibles con el modelo actual.",
       "opposition": "Generalitat Valenciana",
       "level": "C1",
       "question_count": 3,
       "scope": {
-        "type": "syllabus_node",
+        "type": "mixed",
         "refs": [
-          "gva-c1-04-03-64-26:tema-01"
+          "es-ce-1978::titulo-i",
+          "es-ley-39-2015::titulo-i",
+          "es-ley-39-2015::titulo-iv"
         ]
       },
       "compatible_syllabi": [
-        "gva-c1-04-03-64-26"
+        "c1-04-03::64-26"
       ],
       "tags": [
         "Ley 39/2015",
         "Constitución",
-        "Procedimiento"
+        "Procedimiento",
+        "demo"
       ],
       "github_url": "https://github.com/OpenOpo/agora/tree/main/banks/demo-gva-c1-administrativo",
       "issues_url": "https://github.com/OpenOpo/agora/issues",
