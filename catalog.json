@@ -51,11 +51,10 @@
       "compatible_syllabi": [
         "c1-04-03::64-26"
       ],
-      "status": "draft",
+      "status": "available",
       "tags": [
         "migracion-wordpress",
-        "c1-04-03",
-        "available"
+        "c1-04-03"
       ],
       "github_url": "https://github.com/OpenOpo/agora/tree/main/banks/migrated-c1-04-03-draft",
       "questions_url": "https://raw.githubusercontent.com/OpenOpo/agora/main/banks/migrated-c1-04-03-draft/questions.jsonl"
