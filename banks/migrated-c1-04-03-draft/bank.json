@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "id": "migrated-c1-04-03-draft",
-  "title": "Banco migrado C1-04-03 - Draft",
-  "description": "Banco migrado desde WordPress. Las preguntas apuntan a refs normativas; la convocatoria C1-04-03::64-26 se representa aparte en syllabi/.",
+  "title": "Banco migrado C1-04-03",
+  "description": "Banco migrado. Las preguntas apuntan a refs normativas; la convocatoria C1-04-03::64-26 se representa aparte en syllabi/.",
   "question_count": 2839,
   "questions_file": "questions.jsonl",
   "scope": {
@@ -39,10 +39,8 @@
   "compatible_syllabi": [
     "c1-04-03::64-26"
   ],
-  "status": "draft",
   "tags": [
     "migracion-wordpress",
-    "c1-04-03",
-    "draft"
+    "c1-04-03"
   ]
 }
