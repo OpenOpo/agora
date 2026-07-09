@@ -6,15 +6,15 @@
       "id": "c1-04-03::64-26",
       "title": "C1-04-03 - Convocatoria 64/26",
       "path": "syllabi/c1-04-03-64-26/syllabus.json",
-      "status": "draft",
+      "status": "available",
       "refs_count": 38
     }
   ],
   "banks": [
     {
-      "id": "migrated-c1-04-03-draft",
-      "title": "Banco migrado C1-04-03 - Draft",
-      "description": "Banco migrado desde WordPress. Las preguntas apuntan a refs normativas; la convocatoria C1-04-03::64-26 se representa aparte en syllabi/.",
+      "id": "migrated-c1-04-03",
+      "title": "Banco migrado C1-04-03",
+      "description": "Banco migrado. Las preguntas apuntan a refs normativas; la convocatoria C1-04-03::64-26 se representa aparte en syllabi/.",
       "question_count": 2839,
       "questions_file": "questions.jsonl",
       "scope": {
@@ -55,7 +55,7 @@
       "tags": [
         "migracion-wordpress",
         "c1-04-03",
-        "draft"
+        "available"
       ],
       "github_url": "https://github.com/OpenOpo/agora/tree/main/banks/migrated-c1-04-03-draft",
       "questions_url": "https://raw.githubusercontent.com/OpenOpo/agora/main/banks/migrated-c1-04-03-draft/questions.jsonl"
